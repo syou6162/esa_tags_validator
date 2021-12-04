@@ -1,0 +1,24 @@
+name: 重複しているタグがないかをvalidate
+
+on:
+  workflow_dispatch:
+  schedule:
+    # UTCの01:00はJSTだと10:00
+    - cron: '0 1 * * *'
+
+jobs:
+  title_validation:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    - run: npm install
+    - name: 重複しているタグがないかvalidation
+      env:
+        ESA_TEAM_NAME: ${{ secrets.ESA_TEAM_NAME }}      
+        ESA_ACCESS_TOKEN: ${{ secrets.ESA_ACCESS_TOKEN }}      
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}      
+      run: npx ts-node src/src/tags_validator.ts
