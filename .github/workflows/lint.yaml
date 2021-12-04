@@ -3,7 +3,7 @@ name: lint
 on: [push]
 
 jobs:
-  title_validation:
+  tags_validation:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
