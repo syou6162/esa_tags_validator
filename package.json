@@ -10,17 +10,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "18.19.18",
-    "@typescript-eslint/eslint-plugin": "7.0.2",
-    "@typescript-eslint/parser": "7.0.2",
+    "@types/node": "20.12.5",
+    "@typescript-eslint/eslint-plugin": "7.5.0",
+    "@typescript-eslint/parser": "7.5.0",
     "eslint": "8.57.0",
     "ts-node": "10.9.2",
-    "typescript": "5.3.3"
+    "typescript": "5.4.4"
   },
   "dependencies": {
     "@slack/webhook": "^7.0.0",
     "axios": "^1.0.0",
-    "date-fns": "^2.21.1",
+    "date-fns": "^3.0.0",
     "date-fns-timezone": "^0.1.4"
   }
 }
