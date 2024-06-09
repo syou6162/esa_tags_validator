@@ -13,4 +13,4 @@ jobs:
         node-version: '20'
     - run: npm install
     - name: lint
-      run: npx eslint --ext .ts src
+      run: npx eslint --ext .ts --ext src
