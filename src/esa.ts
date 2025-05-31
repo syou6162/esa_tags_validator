@@ -8,7 +8,7 @@ export type EsaConfig = {
 
 export type Tag = {
   name: string;
-  posts_count: number; // eslint-disable-line camelcase
+  posts_count: number;
 }
 
 export type EsaTags = {
